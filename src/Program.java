@@ -29,14 +29,20 @@ public class Program {
 //        }
 //        end = System.currentTimeMillis();
 //        System.out.println("\n//////////////////////////////\n" + (end - start) + " milisegundos");
-//    }
+
+//////////////////////////////////////////////////////////////////////////
+//EXERCICIO 6
+//////////////////////////////////////////////////////////////////////////
+//        Livro livro = new Livro();
+//
+//        new Leitor(livro);
+//        new Escritor(livro).start();
 //////////////////////////////////////////////////////////////////////////
 //EXERCICIO 5
 //////////////////////////////////////////////////////////////////////////
-        Livro livro = new Livro();
+        Mensagem mensagem = new Mensagem();
 
-        new Leitor(livro);
-        new Escritor(livro).start();
+        new Usuario2(mensagem);
+        new Usuario1(mensagem).start();
     }
-
 }
