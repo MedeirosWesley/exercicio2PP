@@ -16,18 +16,14 @@ public class Program {
 
 
 
-        start = System.currentTimeMillis()/1000;
+        start = System.currentTimeMillis();
         int i=0,t=0;
         for(; i<=99999; i+=1000, t++){
             Prime prime = new Prime(i,t);
             prime.start();
-            if(i == 99999){
-                end = System.currentTimeMillis()/1000;
-                System.out.println("\n//////////////////////////////\n" + (end - start) + " segundos");
-            }
         }
-
-
+        end = System.currentTimeMillis();
+        System.out.println("\n//////////////////////////////\n" + (end - start) + " milisegundos");
     }
 
 

@@ -16,7 +16,7 @@
                         prime = false;
                     }
                 }
-                if(prime) System.out.println(n + " thread -> " + t);
+                //if(prime) System.out.println(n + " thread -> " + t);
                 prime = true;
                 i=2;
                 n++;
