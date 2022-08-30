@@ -7,12 +7,11 @@ import java.util.Random;
 public class Escritor extends Thread{
 	private Livro livro = null;
 	private Random rand = new Random();
-
-	private DataOutputStream out;
+	private final DataOutputStream out;
 	
-	public Escritor(Livro livro, PipedOutputStream os) {
-		this.out = new DataOutputStream(os);
+	public Escritor(Livro livro) {
 		this.livro = livro;
+		out = new DataOutputStream(this.livro.getOut());
 	}
 
 	public void escrever() throws IOException {

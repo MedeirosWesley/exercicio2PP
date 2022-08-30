@@ -1,16 +1,22 @@
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
 public class Livro {
-	
-	private char mensagem = ' ';
-	
-	public Livro() { }
 
-	public char getMensagem() {
-		return mensagem;
+	private PipedOutputStream out;
+	private PipedInputStream in;
+	
+	public Livro() throws IOException {
+		this.out = new PipedOutputStream();
+		this.in = new PipedInputStream(out);
 	}
 
-	public void setMensagem(char mensagem) {
-		this.mensagem = mensagem;
+	public PipedInputStream getIn() {
+		return in;
 	}
-	
-	
+	public PipedOutputStream getOut() {
+		return out;
+	}
+
 }
